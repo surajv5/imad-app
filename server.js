@@ -5,13 +5,31 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
+var articles={
+ 'article-one':{
     title:'article one | suraj',
     heading:'article one',
+    date: 'sep 10, 2017',
+    content: `<p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
+          <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
+           <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>`
+},
+ 'article-two':{
+         title:'article two | suraj',
+    heading:'article two',
+    date: 'sep 15, 2017',
+    content: `<p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
+          <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
+           <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>`
+ },
+ 'article-three':{
+         title:'article two | suraj',
+    heading:'article two',
     date: 'sep 5, 2017',
     content: `<p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
           <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
            <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>`
+ }
 };
 
 function createTemplate(data){
@@ -57,17 +75,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res){
-    res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res){
+    var articleName=req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two', function (req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
 
-app.get('/article-three', function (req, res){
-     res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
