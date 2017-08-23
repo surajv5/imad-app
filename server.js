@@ -24,7 +24,7 @@ var articles={
  },
  'article-three':{
          title:'article three | suraj',
-    heading:'article two',
+    heading:'article three',
     date: 'sep 20, 2017',
     content: `<p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
           <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
