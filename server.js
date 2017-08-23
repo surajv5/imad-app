@@ -23,9 +23,9 @@ var articles={
            <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>`
  },
  'article-three':{
-         title:'article two | suraj',
+         title:'article three | suraj',
     heading:'article two',
-    date: 'sep 5, 2017',
+    date: 'sep 20, 2017',
     content: `<p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
           <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>
            <p>this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. this is article one. read carefully. </p>`
