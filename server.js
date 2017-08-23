@@ -65,7 +65,7 @@ var htmlTemplate=
             </div>
             <div>
              ${content}
-         </div>
+         </div></div>
             </body>
 </html>`;
 return htmlTemplate;
