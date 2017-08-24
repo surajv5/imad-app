@@ -1,10 +1,7 @@
-console.log('Loaded!');
-alert(
-    "hi i am ur frnd"
-);
-var element=document.getElementById('main-text');
-element.innerHtml='I am suraj';
-var img=document.getElementById('madi');
-img.onClick=function(){
-    img.style.marginLeft='100px';
-}
+var button=document.getElementById('counter');
+var counter=0;
+button.onClick=function(){
+    counter=counter+1;
+    var span=document.getElementById('count');
+    span.innerHtml=counter.toString();
+};
